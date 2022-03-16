@@ -91,7 +91,27 @@ body{
  }
 
 /* responsive */
-/* Iphone SE,7,8 */
+@media(max-width: 1680px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 1300px;
+    height: 900px;
+  }
+
+  #happy,#birth,#day{
+    margin-left: 20px;
+    font-size: 80px;
+    text-align: center;
+  }
+
+  .wish{
+    font-size: 45px;
+    margin: 10px 40px 0;
+  }
+
+}
+
 @media(max-width: 920px){
   canvas{
     position: absolute;
