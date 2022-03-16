@@ -22,9 +22,9 @@
 <body>
     
     <div id="HappyBday">
-        <p id="happy" style="margin-left: 200px;">happy</p>
-        <p id="birth" style="margin-left: 550px;">birth</p>
-        <p id="day" style="margin-left: 1000px;">day</p>
+        <p id="happy">happy</p>
+        <p id="birth">birth</p>
+        <p id="day">day</p>
     </div>
     <div class="Wishes">
         <div class="wish">
@@ -80,6 +80,8 @@
 
         // Confetti party
         startConfetti()
+        setTimeout(() => {stopConfetti()}, 1900);
+        
     </script>
 </body>
 

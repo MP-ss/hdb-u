@@ -5,15 +5,33 @@ canvas{
     height: inherit;
   }
 
+body{
+  margin: 0;
+}
+
 #HappyBday{
     font-family: 'Monoton', cursive;
 }
 
 #HappyBday p{
     font-size: 155px;
-    margin: 0;
     text-transform: uppercase;
     cursor: default;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+#happy{
+  margin-left: 200px;
+}
+
+#birth{
+  margin-left: 550px;
+}
+
+#day{
+  margin-left: 1000px;
 }
 
 .Wishes {
@@ -37,7 +55,8 @@ canvas{
     width: 100px;
     height: 60px;
     font-size: 24px;
-    float: right;
+    position: absolute;
+    right: 0;
     margin-right: 80px;
     font-family: 'Chakra Petch', sans-serif;
     border: none;
@@ -71,3 +90,130 @@ canvas{
    }
  }
 
+/* responsive */
+/* Iphone SE,7,8 */
+@media(max-width: 920px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 820px;
+  }
+
+  #happy,#birth,#day{
+    margin-left: 20px;
+  }
+
+  .wish{
+    font-size: 45px;
+    margin: 10px 40px 0;
+  }
+
+  .next{
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 130px;
+    height: 80px;
+    font-size: 30px;
+  }
+}
+
+@media(max-width: 540px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 538px;
+  }
+
+  #HappyBday p {
+    font-size: 100px;
+  }
+}
+
+
+@media(max-width: 420px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 415px;
+  }
+
+  #HappyBday p {
+    font-size: 80px;
+  }
+
+  #happy,#birth,#day{
+    margin-left: 20px;
+  }
+
+  .wish{
+    font-size: 28px;
+    margin: 10px 40px 0;
+  }
+
+  .next{
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 100px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 392px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 660px;
+  }
+
+  #HappyBday p {
+    font-size: 75px;
+  }
+
+  #happy,#birth,#day{
+    margin-left: 20px;
+  }
+  
+  .wish{
+    font-size: 24px;
+    margin: 10px 10px 0;
+  }
+
+  .next{
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
+}
+
+@media(max-width: 290px){
+  canvas{
+    position: absolute;
+    top: 0;
+    width: 350px;
+    height: 660px;
+  }
+
+  #HappyBday p {
+    font-size: 58px;
+  }
+
+  #happy,#birth,#day{
+    margin-left: 20px;
+  }
+  
+  .wish{
+    font-size: 24px;
+    margin: 10px 10px 0;
+  }
+
+  .next{
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
