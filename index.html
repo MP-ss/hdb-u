@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font HDB -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <!-- font wishes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap" rel="stylesheet">
+    <!-- link to css -->
+    <link rel="stylesheet" href="index.css">
+    <title>HBD TO U</title>
+</head>
+
+<body>
+    
+    <div id="HappyBday">
+        <p id="happy" style="margin-left: 200px;">happy</p>
+        <p id="birth" style="margin-left: 550px;">birth</p>
+        <p id="day" style="margin-left: 1000px;">day</p>
+    </div>
+    <div class="Wishes">
+        <div class="wish">
+            <p id="text"></p>
+        </div>
+        
+    </div>
+    <button class="next" onclick="window.location.reload()"> มีอีกนะ </button>
+    
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/confetti.js"></script>
+    <script type="text/javascript">
+        document.getElementById("text").innerHTML = randomWish();
+
+        function randomWish(){
+            var manyWish = ["ขอให้โชคดีในวันพิเศษวันนี้นะ","ขอให้มีความสุขในวันเกิดมาก ๆ","ขอให้มีแต่สิ่ง ๆ เข้ามาในวันเกิดจ้า","ขอให้สำเร็จในทุกเป้าหมายนะ","ขอให้อยู่จนแก่แบบไม่มีฟันไปเลยจ้าา",
+            "สุขสันต์วันเกิดนะคะ ขอมห้มีความสุขมากมาก สุขภาพแข้งแรง","ขอให้สมหวังในสิ่งที่ปรารถนานะรวยๆๆเฮงนะจ๊ะ","ความแก่เป็นเรื่องธรรมชาติ แต่รักแกมากๆ เป็นเรื่องของเรา","หมูกระทะยังมีน้ำซุป รักเธอนะจุ๊บจุ๊บ ขอให้มีแฟนไวๆ",
+            "รวยยยยยยจร้าาาา",",u8;kl6-,kdqqqqqq"];
+
+            let random = manyWish[Math.floor(Math.random()*manyWish.length)];
+            return random;
+        };
+
+        // Scrollreveal
+        ScrollReveal({ 
+            /*reset: true*/
+            duration: 1200 ,
+            distance: '20px' ,
+            delay: 30
+         });
+
+         ScrollReveal().reveal('#happy', {origin:'right'});
+         ScrollReveal().reveal('#birth', {delay: 200,origin:'right'});
+         ScrollReveal().reveal('#day', {delay: 300 ,origin:'right'});
+         ScrollReveal().reveal('.next , #text', {origin:'bottom', distance: '10px'});
+       
+        //  Background Color
+         document.body.style.backgroundColor = getNewBGColor();
+        function getNewBGColor(){
+            var bgColor = ['#6A5495','#F65C78','#516BEB','#A2D2FF'];
+            let random = bgColor[Math.floor(Math.random() * bgColor.length)];
+            return random;
+        };
+
+        // Happy Birth Day Color
+        document.getElementById('HappyBday').style.color = getNewTextColor();
+        function getNewTextColor(){
+            var happyText = ['#ffb0f2','#ffe49e','#C3F584'];
+            let random = happyText[Math.floor(Math.random()*happyText.length)];
+            return random;
+        };
+
+        // Confetti party
+        startConfetti()
+    </script>
+</body>
+
+</html>
